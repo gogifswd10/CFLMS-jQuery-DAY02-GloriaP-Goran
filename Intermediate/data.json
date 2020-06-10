@@ -6,21 +6,24 @@ var family =
       "img": "https://img.thedailybeast.com/image/upload/c_crop,d_placeholder_euli9k,h_1439,w_2560,x_0,y_0/dpr_1.5/c_limit,w_1044/fl_lossy,q_auto/v1492458768/articles/2013/11/08/johnny-knoxville-on-how-he-pulled-off-bad-grandpa-s-most-hilarious-raunchiest-prank/131108-stern-bad-grandpa-tease_hsfhxq",
       "relation" : "grandpa",
       "age" : "99",
-      "closeFamily" : "y"
+      "closeFamily" : "y",
+      "hobby" : "football"
   }, {
       "firstName": "Jana",
       "lastName": "Obama",
       "img": "https://cdn.prod.www.spiegel.de/images/3a23ba05-0001-0004-0000-000000672363_w850_r1.77_fpx44.83_fpy52.95.jpg",
       "relation" : "grandma",
       "age" : "34",
-      "closeFamily" : "n"
+      "closeFamily" : "n",
+      "hobby" : "piano"
   }, {
       "firstName": "Paul",
       "lastName": "Putin",
       "img": "https://express-images.franklymedia.com/6616/sites/41/2019/08/30075839/Craig-Morgan-NCD.jpg",
       "relation" : "father",
       "age" : "40",
-      "closeFamily" : "n"
+      "closeFamily" : "n",
+      "hobby" : "govern"
   },
    {
       "firstName": "Christine",
@@ -28,21 +31,25 @@ var family =
       "img": "https://image.freepik.com/fotos-kostenlos/laechelnde-blonde-junge-frau-mit-ihren-gekreuzten-armen-die-gegen-grauen-hintergrund-stehen_23-2148028976.jpg",
       "relation" : "mother",
       "age" : "33",
-      "closeFamily" : "y"
+      "closeFamily" : "y",
+      "hobby" : "nothing"
+
   }, {
       "firstName": "Smantha",
       "lastName": "Kurz",
       "img": "https://ichef.bbci.co.uk/news/410/cpsprodpb/1646D/production/_105854219_megan.jpg",
       "relation" : "daughter",
       "age" : "18",
-      "closeFamily" : "y" 
+      "closeFamily" : "y",
+      "hobby" : "vote"
   }, {
       "firstName": "Philip",
       "lastName": "Kern",
       "img": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Team_Korea_Russia_WorldCup_02_%28cropped%29.png",
       "relation" : "son",
       "age" : "14",
-      "closeFamily" : "n"
+      "closeFamily" : "n",
+      "hobby" : "talking"
   },
    {
       "firstName": "Valentin",
@@ -50,14 +57,16 @@ var family =
       "img": "https://editorial01.shutterstock.com/wm-preview-450/10052887a/41e47681/michael-blackson-and-jim-gray-out-and-about-los-angeles-usa-shutterstock-editorial-10052887a.jpg",
       "relation" : "son",
       "age" : "11",
-      "closeFamily" : "y"
+      "closeFamily" : "y",
+      "hobby" : "skiing"
   }, {
       "firstName": "Susi",
       "lastName": "Dana",
       "img": "https://www.miss.at/wp-content/uploads/2018/12/gal-gadot-wcw-1024x697.jpg",
       "relation" : "cousin",
       "age" : "22",
-      "closeFamily" : "n"
+      "closeFamily" : "n",
+      "hobby" : "rap"
   }
 
 ]`;

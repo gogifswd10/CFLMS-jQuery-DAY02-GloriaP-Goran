@@ -34,6 +34,7 @@
             width: 450px;
             height: 350px;
             padding: 10px;
+            object-fit: cover;
         }
 
         .closeMember {
@@ -65,18 +66,29 @@
                 const relation = myData[i].relation;
                 const age = myData[i].age;
                 const closeFamily = myData[i].closeFamily;
+                const hobby = myData[i].hobby;
                 
                 if (closeFamily === "y"){
                     $(".result").append(
-                    `<div class="closeMember familyMember"><img src="${img}"><p>First Name: <b>${firstName}</b></p><p>Lastname: <b>${lastName}</b></p><p>Relation: <b>${relation}</b></p><p>Age: <b>${age}</b></p></div>`
+                    `<div class="closeMember familyMember"><img src="${img}"><p>First Name: <b>${firstName}</b></p><p>Lastname: <b>${lastName}</b></p><p>Relation: <b>${relation}</b></p><p>Age: <b>${age}</b></p>
+                    <p class="hobbies">Hobby: ${hobby}</p>
+                    </div>`
                     );
                 } else {
                     $(".result").append(
-                    `<div class="notCloseMember familyMember"><img src="${img}"><p>First Name: <b>${firstName}</b></p><p>Lastname: <b>${lastName}</b></p><p>Relation: <b>${relation}</b></p><p>Age: <b>${age}</b></p></div>`
+                    `<div class="notCloseMember familyMember"><img src="${img}"><p>First Name: <b>${firstName}</b></p><p>Lastname: <b>${lastName}</b></p><p>Relation: <b>${relation}</b></p><p>Age: <b>${age}</b></p>
+                    <p class="hobbies">Hobby: ${hobby}</p>
+                    </div>`
                     );
                 }
                              
             }
+
+            $(".hobbies").css("visibility", "hidden");
+
+            $(".result > div").click(function(){
+                $(this).children(".hobbies").css("visibility", "visible");
+            })
         });
    
     </script>

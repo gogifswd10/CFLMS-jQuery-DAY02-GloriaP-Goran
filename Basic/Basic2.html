@@ -11,11 +11,18 @@
 
 	</div>
 
-
-
 	<script type="text/javascript">
 		$(document).ready(function() {
+			// styling
+			$("#wrapping").css({
+				"display": "flex",
+				"flex-wrap": "wrap",
+				"width" : "500px"
+			});
 
+			$("div > img").css("width", "150px");
+
+			// creating img order	
 			imgs = ["img/whiteBox.png", "img/santaClaus.png"];
 			order = [0, 1, 0, 0, 1, 0, 1, 0, 1];
 
@@ -29,16 +36,10 @@
 			}
 
 
-			$("#wrapping").css({
-				"display": "flex",
-				"flex-wrap": "wrap",
-				"width" : "500px"
-			});
-
-			$("div > img").css("width", "150px");
 
 			$("[src='img/santaClaus.png']").parent().addClass("santa");
-
+			
+			// click Event
 			$(".santa").click(function() {
 
 				if ($(this).hasClass("hidden")){
@@ -47,8 +48,8 @@
 				}
 
 				else {
-				$(this).children("img").css("visibility", "hidden");
-				$(this).addClass("hidden");
+					$(this).children("img").css("visibility", "hidden");
+					$(this).addClass("hidden");
 
 				}
 				});
