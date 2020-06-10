@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Basic exercise 1</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+</head>
+<body>
+	<div>
+		<img src="img/bell.png">
+		<span>Bell</span>
+	</div>
+		
+	<div>
+		<img src="img/santaClaus.png">
+		<span>Santa Claus</span>
+	</div>
+			
+	<div>
+		<img src="img/whiteBox.png">
+		<span>White Box</span>
+	</div>
+	
+	<div id="explanation">
+		
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("span").css("display", "none")
+			$("img").css("width","150px");
+
+			$("div").click(function() {
+				var content = $(this).children("span").html();
+				$("#explanation").text("You clicked on the " + content)
+			 });
+
+		});
+
+
+	</script>
+</body>
+</html>

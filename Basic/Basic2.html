@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Basic 2</title>
+	<link rel="stylesheet" href="">
+	<script src="https://code.jquery.com/jquery-3.5.1.js"> </script>
+</head>
+<body>
+	<div id="wrapping">
+		<div>
+			<img src="img/whiteBox.png">
+		</div>
+		
+
+		<div>
+			<img src="img/santaClaus.png">
+		</div>
+
+		<div>
+			<img src="img/whiteBox.png">
+		</div>
+
+		<div>
+			<img src="img/whiteBox.png">
+		</div>
+
+		<div>
+			<img src="img/santaClaus.png">
+		</div>
+
+		<div>
+			<img src="img/whiteBox.png">
+		</div>
+
+		<div>
+			<img src="img/santaClaus.png">
+		</div>
+
+		<div>
+			<img src="img/whiteBox.png">
+		</div>
+
+		<div>
+			<img src="img/santaClaus.png">
+		</div>
+	</div>
+
+
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#wrapping").css({
+				"display": "flex",
+				"flex-wrap": "wrap",
+				"width" : "500px"
+			});
+
+			$("div > img").css("width", "150px");
+
+			$("[src='img/santaClaus.png']").parent().addClass("santa");
+
+			$(".santa").click(function() {
+
+
+				if ($(this).hasClass("hidden")){
+					$(this).children("img").css("visibility", "visible");
+					$(this).removeClass("hidden")
+
+				}
+
+				else {
+				$(this).children("img").css("visibility", "hidden");
+				$(this).addClass("hidden");
+
+				}
+				});
+			});
+		
+	</script>
+</body>
+</html>
