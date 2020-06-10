@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: seashell;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2em;
+            text-decoration: underline;
+        }
+
+        .familyMember {
+            margin: 10px;
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+            border-radius: 20px;
+            box-shadow: 6px 6px 6px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .familyMember {
+            font-size: 1.6em;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: darkslategray;
+        }
+
+        img {
+            width: 450px;
+            height: 350px;
+            padding: 10px;
+        }
+
+        .closeMember {
+            background-color: lemonchiffon;
+        }
+
+        .notCloseMember {
+            background-color: salmon;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Family Album</h1>
+    <div class="result"></div>
+    <!-- Getting external JSON Data -->
+    <script src="data.json" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Starting Script -->
+    <script>
+
+        $(document).ready(function(){
+            const myData = JSON.parse(family);    
+
+            for (let i = 0; i < myData.length; i++) {
+                const firstName = myData[i].firstName;
+                const lastName = myData[i].lastName;
+                const img = myData[i].img;
+                const relation = myData[i].relation;
+                const age = myData[i].age;
+                const closeFamily = myData[i].closeFamily;
+                
+                if (closeFamily === "y"){
+                    $(".result").append(
+                    `<div class="closeMember familyMember"><img src="${img}"><p>First Name: <b>${firstName}</b></p><p>Lastname: <b>${lastName}</b></p><p>Relation: <b>${relation}</b></p><p>Age: <b>${age}</b></p></div>`
+                    );
+                } else {
+                    $(".result").append(
+                    `<div class="notCloseMember familyMember"><img src="${img}"><p>First Name: <b>${firstName}</b></p><p>Lastname: <b>${lastName}</b></p><p>Relation: <b>${relation}</b></p><p>Age: <b>${age}</b></p></div>`
+                    );
+                }
+                             
+            }
+        });
+   
+    </script>
+</body>
+</html>
