@@ -13,14 +13,6 @@
 
 	<script type="text/javascript">
 		$(document).ready(function() {
-			// styling
-			$("#wrapping").css({
-				"display": "flex",
-				"flex-wrap": "wrap",
-				"width" : "500px"
-			});
-
-			$("div > img").css("width", "150px");
 
 			// creating img order	
 			imgs = ["img/whiteBox.png", "img/santaClaus.png"];
@@ -35,10 +27,19 @@
 				$("#div" + [i]).append("<img src=\"" + imgs[order[i]] + "\">")
 			}
 
+			// styling
+			$("*").css("margin", "0 auto")
+
+			$("#wrapping").css({
+				"display": "flex",
+				"flex-wrap": "wrap",
+				"width" : "800px"
+			});
+			$("div > img").css("width", "250px");
 
 
 			$("[src='img/santaClaus.png']").parent().addClass("santa");
-			
+
 			// click Event
 			$(".santa").click(function() {
 
